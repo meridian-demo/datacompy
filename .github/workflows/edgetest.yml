@@ -11,7 +11,7 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
-    runs-on: ubuntu-latest
+    runs-on: meridian
     name: running edgetest
     steps:
       - uses: actions/checkout@v4

@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   lint-and-format:
-    runs-on: ubuntu-latest
+    runs-on: meridian
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
@@ -30,7 +30,7 @@ jobs:
         run: ruff format --check
 
   test-spark-install:
-    runs-on: ubuntu-latest
+    runs-on: meridian
     strategy:
       fail-fast: false
       matrix:
@@ -65,7 +65,7 @@ jobs:
 
 
   test-bare-install:
-    runs-on: ubuntu-latest
+    runs-on: meridian
     strategy:
       fail-fast: false
       matrix:
@@ -91,7 +91,7 @@ jobs:
           python -m pytest tests/ --ignore=tests/test_snowflake.py
 
   test-fugue-install-no-spark:
-    runs-on: ubuntu-latest
+    runs-on: meridian
     strategy:
       fail-fast: false
       matrix:

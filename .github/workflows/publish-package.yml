@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: meridian
     environment: pypi
     permissions:
       id-token: write
